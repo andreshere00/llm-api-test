@@ -1,0 +1,16 @@
+It the context of text translation and transformation tasks, the input sequence is a collection of all words from a text. Each word is denoted as $x_i$ where $i$ is the order of that word. So, input data is $\mathbf{x} = (x_1, \dots, x_n)$. The hidden states $h_i$ are computed using the following expression:
+
+$$ h_t = f(W^{(hh)} h_{t-1} + W^{(hx)} x_t)$$
+
+This is, each hideen states in each computational step $t$ is defined as a function of 
+
+\begin{figure}[h]
+    \centering
+    \includesvg[width = 0.75\textwidth]{images/s2s_model.svg}
+    \caption{Encoder-decoder basic architecture}
+    \label{fig:s2smodel}
+\end{figure}
+
+\subsubsection{Stacks}
+
+The encoder is composed of a stack of $N=6$ identical layers. Each layer has two sub-layers. The first is a multi-head 

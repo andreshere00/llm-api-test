@@ -1,0 +1,8 @@
+# .gitignore
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Pipenv
+Pipfile.lock
